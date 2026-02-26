@@ -1,1 +1,33 @@
+.shop-section {
+  text-align: center;
+  padding: 60px 20px;
+}
 
+.shop-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
