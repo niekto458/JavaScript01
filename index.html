@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Anime Shop</title>
+  <title>NIKE STORE</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<section class="shop-section">
-  <h1>ANIME SHOP</h1>
+<header>
+  <h1 class="logo">NIKE</h1>
+</header>
 
-  <button class="shop-btn" id="shopButton">View Products</button>
+<section class="hero">
+  <h2>JUST DO IT.</h2>
+  <p>Discover the newest collection.</p>
+  <button onclick="toggleShop()">SHOP NOW</button>
+</section>
 
-  <div id="products" class="products hidden">
+<section id="shop" class="shop hidden">
+
+  <h2>SHOP</h2>
+
+  <div class="products">
 
     <div class="product">
-      <img src="https://via.placeholder.com/200x200" alt="Phone Case">
-      <h3>Anime Phone Case</h3>
-      <p>Stylish protective case</p>
-      <span class="price">19.99€</span>
+      <img src="https://picsum.photos/300?1">
+      <h3>Nike Air</h3>
+      <p>$120</p>
     </div>
 
     <div class="product">
-      <img src="https://via.placeholder.com/200x200" alt="Figure">
-      <h3>Anime Figure</h3>
-      <p>High quality collectible</p>
-      <span class="price">49.99€</span>
+      <img src="https://picsum.photos/300?2">
+      <h3>Nike Runner</h3>
+      <p>$95</p>
     </div>
 
     <div class="product">
-      <img src="https://via.placeholder.com/200x200" alt="Limited">
-      <h3>Limited Edition Item</h3>
-      <p>Only 100 pieces worldwide</p>
-      <span class="price">99.99€</span>
+      <img src="https://picsum.photos/300?3">
+      <h3>Nike Street</h3>
+      <p>$110</p>
     </div>
 
   </div>
+
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
