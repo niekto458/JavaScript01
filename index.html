@@ -1,52 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>NIKE STORE</title>
-  <link rel="stylesheet" href="style.css">
+<title>Color Bet Game</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-<header>
-  <h1 class="logo">NIKE</h1>
-</header>
+<h1>Color Bet</h1>
 
-<section class="hero">
-  <h2>JUST DO IT.</h2>
-  <p>Discover the newest collection.</p>
-  <button onclick="toggleShop()">SHOP NOW</button>
-</section>
+<h2 id="balance">Balance: $500</h2>
 
-<section id="shop" class="shop hidden">
+<div class="game">
 
-  <h2>SHOP</h2>
+<input id="betAmount" type="number" placeholder="Enter bet amount">
 
-  <div class="products">
+<select id="color">
+<option value="red">Red</option>
+<option value="black">Black</option>
+</select>
 
-    <div class="product">
-      <img src="https://picsum.photos/300?1">
-      <h3>Nike Air</h3>
-      <p>$120</p>
-    </div>
+<button onclick="playGame()">BET</button>
 
-    <div class="product">
-      <img src="https://picsum.photos/300?2">
-      <h3>Nike Runner</h3>
-      <p>$95</p>
-    </div>
+</div>
 
-    <div class="product">
-      <img src="https://picsum.photos/300?3">
-      <h3>Nike Street</h3>
-      <p>$110</p>
-    </div>
+<h2 id="result"></h2>
 
-  </div>
+<div id="gameOver" class="hidden">
 
-</section>
+<h1>You went bankrupt!</h1>
+
+<button onclick="restartGame()">Try Again</button>
+
+</div>
 
 <script src="script.js"></script>
 
