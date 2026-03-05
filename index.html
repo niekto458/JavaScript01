@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Color Bet Game</title>
+<title>Color Bet</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div class="container">
+
 <h1>Color Bet</h1>
 
-<h2 id="balance">Balance: $500</h2>
+<div class="balance" id="balance">
+Balance: $500
+</div>
 
-<div class="game">
+<div class="wheel" id="wheel">
+?
+</div>
 
-<input id="betAmount" type="number" placeholder="Enter bet amount">
+<div class="controls">
+
+<input id="betAmount" type="number" placeholder="Bet amount">
 
 <select id="color">
 <option value="red">Red</option>
@@ -24,12 +33,13 @@
 
 </div>
 
-<h2 id="result"></h2>
+<div class="result" id="result"></div>
 
-<div id="gameOver" class="hidden">
+</div>
 
-<h1>You went bankrupt!</h1>
+<div id="gameOver" class="gameover hidden">
 
+<h1>You went bankrupt</h1>
 <button onclick="restartGame()">Try Again</button>
 
 </div>

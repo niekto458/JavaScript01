@@ -3,34 +3,34 @@ let balance = 500;
 function playGame(){
 
 let bet = parseInt(document.getElementById("betAmount").value);
-let colorChoice = document.getElementById("color").value;
+let choice = document.getElementById("color").value;
 
-if(bet > balance || bet <= 0){
-alert("Invalid bet amount!");
+if(!bet || bet <= 0){
+alert("Enter a bet");
 return;
 }
 
-let random = Math.random();
-let resultColor;
-
-if(random < 0.5){
-resultColor = "red";
-}else{
-resultColor = "black";
+if(bet > balance){
+alert("Not enough money");
+return;
 }
 
-let resultText = "Result: " + resultColor;
+let resultColor = Math.random() < 0.5 ? "red" : "black";
 
-if(colorChoice === resultColor){
+let wheel = document.getElementById("wheel");
+
+wheel.style.background = resultColor;
+wheel.innerText = resultColor.toUpperCase();
+
+if(choice === resultColor){
 balance += bet;
-resultText += " — You WON $" + bet;
+document.getElementById("result").innerText = "You WON $" + bet;
 }else{
 balance -= bet;
-resultText += " — You LOST $" + bet;
+document.getElementById("result").innerText = "You LOST $" + bet;
 }
 
 document.getElementById("balance").innerText = "Balance: $" + balance;
-document.getElementById("result").innerText = resultText;
 
 if(balance <= 0){
 document.getElementById("gameOver").classList.remove("hidden");
@@ -44,6 +44,8 @@ balance = 500;
 
 document.getElementById("balance").innerText = "Balance: $500";
 document.getElementById("result").innerText = "";
+document.getElementById("wheel").style.background = "#333";
+document.getElementById("wheel").innerText = "?";
 
 document.getElementById("gameOver").classList.add("hidden");
 
