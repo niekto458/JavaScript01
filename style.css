@@ -1,62 +1,114 @@
-body{
+*{
 margin:0;
-font-family:Arial;
-background:#0f0f14;
-color:white;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+background: radial-gradient(circle at top,#2a2a72,#000);
+color:white;
 }
+
+/* MAIN GAME BOX */
 
 .container{
+background:linear-gradient(145deg,#141414,#1f1f1f);
+padding:50px;
+border-radius:20px;
+width:420px;
 text-align:center;
-background:#1b1b24;
-padding:40px;
-border-radius:12px;
-width:400px;
+box-shadow:0 0 40px rgba(0,0,0,0.8);
 }
 
+/* TITLE */
+
 h1{
+font-size:40px;
 margin-bottom:10px;
+letter-spacing:2px;
 }
+
+/* BALANCE */
 
 .balance{
 font-size:22px;
-margin-bottom:20px;
+margin-bottom:25px;
+color:#ffd700;
+font-weight:bold;
 }
 
+/* RESULT WHEEL */
+
 .wheel{
-width:120px;
-height:120px;
+width:150px;
+height:150px;
 border-radius:50%;
-margin:20px auto;
+margin:25px auto;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:30px;
+font-size:32px;
 font-weight:bold;
 background:#333;
-transition:0.3s;
+border:4px solid white;
+transition:0.4s;
 }
 
-.controls input,
-.controls select{
-padding:10px;
+/* INPUT AREA */
+
+.controls{
+margin-top:10px;
+}
+
+.controls input{
+width:140px;
+padding:12px;
+border:none;
+border-radius:8px;
 margin:5px;
 font-size:16px;
 }
 
-button{
-padding:10px 20px;
-cursor:pointer;
+.controls select{
+padding:12px;
+border-radius:8px;
+margin:5px;
 font-size:16px;
 }
 
-.result{
-margin-top:20px;
-font-size:18px;
+/* BET BUTTON */
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+background:linear-gradient(45deg,#ff512f,#dd2476);
+color:white;
+transition:0.2s;
 }
+
+button:hover{
+transform:scale(1.08);
+box-shadow:0 0 15px rgba(255,80,120,0.7);
+}
+
+/* RESULT TEXT */
+
+.result{
+margin-top:25px;
+font-size:20px;
+min-height:24px;
+}
+
+/* GAME OVER SCREEN */
 
 .gameover{
 position:fixed;
@@ -64,11 +116,17 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:black;
+background:radial-gradient(circle,#000,#200000);
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+}
+
+.gameover h1{
+font-size:50px;
+color:#ff3c3c;
+margin-bottom:20px;
 }
 
 .hidden{
