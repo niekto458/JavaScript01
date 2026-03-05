@@ -1,12 +1,7 @@
-const button = document.getElementById("shopButton");
-const products = document.getElementById("products");
+function toggleShop() {
 
-button.addEventListener("click", function () {
-  products.classList.toggle("hidden");
+const shop = document.getElementById("shop");
 
-  if (products.classList.contains("hidden")) {
-    button.textContent = "View Products";
-  } else {
-    button.textContent = "Hide Products";
-  }
-});
+shop.classList.toggle("hidden");
+
+}
