@@ -1,134 +1,130 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background: radial-gradient(circle at top,#003366,#000022);
-color:#eee;
+  color:#111;
+  background:#fff;
 }
 
-/* MAIN GAME BOX */
+/* NAVBAR */
 
-.container{
-background:linear-gradient(145deg,#1a1a2e,#16213e);
-padding:50px;
-border-radius:20px;
-width:420px;
-text-align:center;
-box-shadow:0 0 40px rgba(0,0,0,0.8);
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:white;
+  border-bottom:1px solid #eee;
+  z-index:100;
 }
 
-/* TITLE */
-
-h1{
-font-size:40px;
-margin-bottom:10px;
-letter-spacing:2px;
+.logo{
+  font-weight:700;
+  font-size:22px;
 }
 
-/* BALANCE */
-
-.balance{
-font-size:22px;
-margin-bottom:25px;
-color:#00ff88;
-font-weight:bold;
+nav a{
+  margin-left:30px;
+  text-decoration:none;
+  color:#111;
+  font-weight:500;
 }
 
-/* RESULT WHEEL */
-
-.wheel{
-width:150px;
-height:150px;
-border-radius:50%;
-margin:25px auto;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:32px;
-font-weight:bold;
-background:#444;
-border:4px solid #00ff88;
-transition:0.4s;
+nav a:hover{
+  opacity:0.6;
 }
 
-/* INPUT AREA */
+/* HERO */
 
-.controls{
-margin-top:10px;
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
 }
 
-.controls input{
-width:140px;
-padding:12px;
-border:none;
-border-radius:8px;
-margin:5px;
-font-size:16px;
+.hero h1{
+  font-size:64px;
+  margin-bottom:20px;
 }
 
-.controls select{
-padding:12px;
-border-radius:8px;
-margin:5px;
-font-size:16px;
+.hero p{
+  font-size:20px;
+  margin-bottom:30px;
+  color:#555;
 }
 
-/* BET BUTTON */
-
-button{
-padding:12px 25px;
-border:none;
-border-radius:10px;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-background:linear-gradient(45deg,#2274A5,#32936F);
-color:white;
-transition:0.2s;
+.hero button{
+  padding:14px 32px;
+  font-size:16px;
+  border:none;
+  cursor:pointer;
+  background:black;
+  color:white;
 }
 
-button:hover{
-transform:scale(1.08);
-box-shadow:0 0 15px rgba(50,147,111,0.7);
+/* SECTIONS */
+
+.section{
+  padding:120px 80px;
+  text-align:center;
 }
 
-/* RESULT TEXT */
-
-.result{
-margin-top:25px;
-font-size:20px;
-min-height:24px;
+.section h2{
+  font-size:42px;
+  margin-bottom:30px;
 }
 
-/* GAME OVER SCREEN */
-
-.gameover{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:radial-gradient(circle,#000022,#220000);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+.section p{
+  font-size:18px;
+  color:#555;
+  max-width:700px;
+  margin:0 auto;
 }
 
-.gameover h1{
-font-size:50px;
-color:#ff3c3c;
-margin-bottom:20px;
+.dark{
+  background:#111;
+  color:white;
 }
 
-.hidden{
-display:none;
+.dark p{
+  color:#ccc;
+}
+
+/* CARDS */
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:50px;
+}
+
+.card{
+  padding:40px;
+  border:1px solid #eee;
+  min-width:200px;
+}
+
+.dark .card{
+  border:1px solid #333;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid #eee;
+  color:#777;
 }
