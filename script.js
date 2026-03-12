@@ -1,5 +1,7 @@
-function scrollToSection(id){
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth"
-  });
+function scrollToContact(){
+
+document.getElementById("contact").scrollIntoView({
+behavior:"smooth"
+});
+
 }
