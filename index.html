@@ -1,50 +1,57 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>Color Bet</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>BrandName</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<header class="navbar">
+  <div class="logo">BrandName</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<h1>Color Bet</h1>
+<section id="home" class="hero">
+  <h1>Build Something Great</h1>
+  <p>Clean design. Professional results.</p>
+  <button onclick="scrollToSection('contact')">Get Started</button>
+</section>
 
-<div class="balance" id="balance">
-Balance: $500
-</div>
+<section id="about" class="section">
+  <h2>About</h2>
+  <p>
+    We create clean, modern digital experiences focused on quality,
+    simplicity, and performance.
+  </p>
+</section>
 
-<div class="wheel" id="wheel">
-?
-</div>
+<section id="services" class="section dark">
+  <h2>Services</h2>
 
-<div class="controls">
+  <div class="cards">
+    <div class="card">Web Design</div>
+    <div class="card">Development</div>
+    <div class="card">Brand Identity</div>
+  </div>
+</section>
 
-<input id="betAmount" type="number" placeholder="Bet amount">
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: contact@example.com</p>
+</section>
 
-<select id="color">
-<option value="red">Red</option>
-<option value="black">Black</option>
-</select>
-
-<button onclick="playGame()">BET</button>
-
-</div>
-
-<div class="result" id="result"></div>
-
-</div>
-
-<div id="gameOver" class="gameover hidden">
-
-<h1>You went bankrupt</h1>
-<button onclick="restartGame()">Try Again</button>
-
-</div>
+<footer>
+  © 2026 BrandName. All rights reserved.
+</footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
